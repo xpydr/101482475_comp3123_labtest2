@@ -18,14 +18,6 @@ A simple, responsive React weather application that displays a 7-day forecast us
 - **openmeteo** ^1.2.2 (Open-Meteo API client)
 - **weather-icons-react** ^1.2.0 (weather icons)
 
-## Project Structure
-src/
-├── App.jsx               # Root component
-├── WeatherApp.jsx        # Main logic and forecast fetching
-├── ui/
-│   └── WeatherCard.jsx   # Individual day card with icon mapping
-└── index.css             # Tailwind imports
-
 
 ## Setup Instructions
 
@@ -53,16 +45,16 @@ npm run dev
 
 ## Usage
 
-- 1. Open the app in your browser.
-- 2. The default location is set to approximately Brantford, Ontario (43.1424, -80.2713).
-- 3. Replace the latitude and longitude values in the input fields with any coordinates you wish to check.
-- 4. The forecast updates automatically when the inputs change (thanks to the useEffect dependency on the constructed URL).
+1. Open the app in your browser.
+2. The default location is set to approximately Brantford, Ontario (43.1424, -80.2713).
+3. Replace the latitude and longitude values in the input fields with any coordinates you wish to check.
+4. The forecast updates automatically when the inputs change (thanks to the useEffect dependency on the constructed URL).
 
-### API
+## API
 - This project uses the free Open-Meteo API (https://api.open-meteo.com/v1/forecast) – no API key required.
 
-### Notes
+## Notes
 - Temperature values are returned in Celsius by default (Open-Meteo behaviour for most coordinates).
 
-### License
+## License
 - This project is for academic evaluation purposes only.
