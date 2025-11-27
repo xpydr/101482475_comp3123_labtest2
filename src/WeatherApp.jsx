@@ -18,7 +18,8 @@ export default function WeatherApp() {
       const parsed = daily.time.map((time, i) => ({
         date: time,
         hi: daily.temperature_2m_max[i],
-        lo: daily.temperature_2m_min[i]
+        lo: daily.temperature_2m_min[i],
+        code: daily.weathercode[i]
       }));
       console.log(parsed)
       setForecast(parsed);
@@ -39,7 +40,7 @@ export default function WeatherApp() {
 
         <div className='my-8 flex gap-4'>
           {forecast.map((day, i) => (
-            <WeatherCard key={i} date={day.date} hi={day.hi} lo={day.lo} />
+            <WeatherCard key={i} date={day.date} hi={day.hi} lo={day.lo} iconCode={day.code} />
           ))}
         </div>
       </div>
